@@ -1,11 +1,14 @@
 /* stylesheet.scss */
 /* stylesheet.css */
+/* Variables */
+/* Inheritance */
 .navbar {
   background-color: #f2f2f2;
 }
 
 .nav-link {
-  color: #404040;
+  color: #000;
+  font-weight: bold;
 }
 
 .nav-link:hover {
