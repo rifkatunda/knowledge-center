@@ -1,11 +1,15 @@
 /* stylesheet.scss */
 /* stylesheet.css */
 /* Variables */
-$nav-background: #f2f2f2;
+$nav-background: #40bf79;
 $padding-sm: 4px;
 $padding-md: 8px;
 $padding-lg: 13px;
 $p-padding-md: 5px;
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 /* Inheritance */
 .navbar {
@@ -13,12 +17,14 @@ $p-padding-md: 5px;
 }
 
 .nav-link {
-    color: #000;
+    color: #fff;
     font-weight: bold;
+    font-size: 1.3em;
 }
 
 .nav-link:hover {
-    color: #999999;
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -47,16 +53,6 @@ $p-padding-md: 5px;
     .navbar, .page-body {
         padding: $padding-lg;
     }
-
-    div {
-        h1, p {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .home-message {
-             font-size: 1.5em;
-        }
-     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
