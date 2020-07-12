@@ -63,7 +63,6 @@ body {
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
-  margin-left: 10px;
   vertical-align: middle;
   color: #000;
   float: right;
@@ -135,7 +134,7 @@ body {
 .disease .anchor {
   position: absolute;
   left: 0px;
-  top: -115px;
+  top: -130px;
 }
 
 .row {
@@ -148,6 +147,10 @@ body {
   overflow: hidden;
   padding-top: 5px;
   border-color: #e6e6e6;
+}
+
+.disease ul {
+  padding-left: 20px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -169,6 +172,12 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
+  .disease .anchor {
+    top: -115px;
+  }
+  .disease-center {
+    margin-left: 10px;
+  }
   .navbar-col {
     padding: 30px 15px;
   }
