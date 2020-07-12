@@ -172,15 +172,16 @@ body {
     .navbar, .page-body {
         padding: $padding-sm;
     }
+
+    .disease-center {
+      margin-left: 10px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
   .disease .anchor {
     top: -115px;
-  }
-  .disease-center {
-    margin-left: 10px;
   }
   .navbar-col {
     padding: 30px 15px;
