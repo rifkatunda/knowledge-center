@@ -1,36 +1,162 @@
 /* stylesheet.scss */
 /* stylesheet.css */
 /* Variables */
-$nav-background: #40bf79;
+$font-color: #013220;
+$top-page-margin: 140px;
+$contents-color: #3dae5f;
 $padding-sm: 4px;
 $padding-md: 8px;
 $padding-lg: 13px;
 $p-padding-md: 5px;
 
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Lato', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', 'serif';
+  font-size: 17px;
+  text-align: justify;
 }
 
-/* Inheritance */
-.navbar {
-    background-color: $nav-background;
+/* Navigation bar: Header */
+.header-bar {
+  border-color: rgba(232, 243, 236, 1) transparent #eee transparent;
+  border-style: solid;
+  border-width: 4px 0 1px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4)
 }
 
-.nav-link {
-    color: #fff;
+.header-inner {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  // text-align: center;
+}
+
+.navbar-inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar-col {
+  position: relative;
+  padding: 24px 15px;
+}
+
+.header-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+}
+
+.disease-center {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  vertical-align: middle;
+  color: #000;
+  float: right;
+}
+
+.disease-center span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: white;
+    line-height: 1;
+    padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+    font-weight: 500;
+    display: inline-block;
+    background-color: #00CC99;
+}
+
+.rif-katunda {
+    color: $font-color;
     font-weight: bold;
     font-size: 1.3em;
+    float: left;
 }
 
-.nav-link:hover {
-    color: #fff;
-    text-decoration: underline;
+.rif-katunda:hover {
+    color: #318154;
+    text-decoration: none;
+}
+
+/* Contents */
+.toc-container {
+    // background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: 100%;
+    margin-top: $top-page-margin;
+    border-radius: 2px;
+    overflow: hidden;
+    position: sticky;
+    top: 115px;
+}
+
+.toc-title {
+    // font-weight: 700;
+    // text-align: center;
+}
+
+.toc-list {
+  padding-left: 8px;
+  color: $contents-color;
+
+  a {
+    color: $contents-color;
+  }
+}
+
+.references li, .toc-container li, .toc-container ul, .toc-container ul li{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+/* Keep the target content from disapperaing */
+.disease {
+  position: relative;
+}
+
+.disease .anchor {
+  position: absolute;
+  left: 0px;
+  top: -115px;
+}
+
+.row {
+  padding-bottom: 24px;
+}
+
+.footer-bar {
+  border-style: solid;
+  border-width: 1px 0 1px;
+  overflow: hidden;
+  padding-top: 5px;
+  border-color: #e6e6e6;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     .navbar, .page-body {
         padding: $padding-sm;
+    }
+    .header-inner {
+      max-width: 540px;
     }
 }
 
@@ -43,21 +169,40 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
-    .navbar, .page-body {
-        padding: $padding-md;
-    }
+  .navbar-col {
+    padding: 30px 15px;
+  }
+
+  .col-md-9 .row:first-child {
+    margin-top: $top-page-margin;
+  }
+
+  .page-body {
+      padding: $padding-md;
+      // max-width: 720px;
+      margin: 0 auto;
+  }
+  .header-inner {
+    max-width: 720px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .navbar, .page-body {
+    .page-body {
         padding: $padding-lg;
+    }
+    .header-inner {
+      max-width: 960px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .navbar, .page-body {
+    .navbar,.page-body {
         padding: $padding-lg;
+    }
+    .header-inner {
+      max-width: 1140px;
     }
 }
