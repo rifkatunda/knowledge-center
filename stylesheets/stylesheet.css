@@ -9,7 +9,7 @@ body {
 
 /* Navigation bar: Header */
 .header-bar {
-  border-color: #e8f3ec transparent #eee transparent;
+  border-color: #fff transparent #eee transparent;
   border-style: solid;
   border-width: 4px 0 1px;
   overflow: hidden;
