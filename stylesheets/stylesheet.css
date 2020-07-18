@@ -2,23 +2,19 @@
 /* stylesheet.css */
 /* Variables */
 body {
-  font-family: "Roboto", "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", "serif";
+  font-family: "Source Sans Pro", "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", "serif";
   font-size: 17px;
   text-align: justify;
 }
 
 /* Navigation bar: Header */
 .header-bar {
-  border-color: #fff transparent #eee transparent;
-  border-style: solid;
-  border-width: 4px 0 1px;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #fff;
-  box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4);
+  background-color: #000;
 }
 
 .header-inner {
@@ -62,23 +58,23 @@ body {
 .disease-center span {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: white;
+  color: black;
   line-height: 1;
   padding: 0.5rem 0.5rem 0.4rem 0.5rem;
   font-weight: 500;
   display: inline-block;
-  background-color: #00CC99;
+  background-color: #fff;
 }
 
 .rif-katunda {
-  color: #013220;
+  color: #fff;
   font-weight: bold;
   font-size: 1.3em;
   float: left;
 }
 
 .rif-katunda:hover {
-  color: #318154;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -86,11 +82,9 @@ body {
 .toc-container {
   border: 1px solid #e6e6e6;
   display: table;
-  font-size: 95%;
   margin-bottom: 1em;
   padding: 20px;
   width: 100%;
-  margin-top: 140px;
   border-radius: 2px;
   overflow: hidden;
   position: sticky;
@@ -99,10 +93,10 @@ body {
 
 .toc-list {
   padding-left: 8px;
-  color: #3dae5f;
+  color: #000;
 }
 .toc-list a {
-  color: #3dae5f;
+  color: #000;
 }
 
 .references li, .toc-container li, .toc-container ul, .toc-container ul li {
@@ -139,6 +133,7 @@ body {
 
 .container {
   padding: 0px 20px;
+  line-height: 2;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -149,6 +144,10 @@ body {
 
   .header-inner {
     max-width: 540px;
+  }
+
+  .toc-container {
+    margin-top: 50px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -171,8 +170,8 @@ body {
     padding: 30px 15px;
   }
 
-  .col-md-9 .row:first-child {
-    margin-top: 140px;
+  .figure {
+    margin-top: 99px;
   }
 
   .page-body {
@@ -182,6 +181,15 @@ body {
 
   .header-inner {
     max-width: 720px;
+  }
+
+  .index-right {
+    padding-left: 30px;
+    padding-right: 80px;
+  }
+
+  .header-bar {
+    box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4);
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
