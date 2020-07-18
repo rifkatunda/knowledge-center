@@ -22,7 +22,8 @@ body {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: $contents-color;
+  background-color: #27b954;
+  // background: linear-gradient( # 10%, #23a74c 80%);
 }
 
 .header-inner {
@@ -34,6 +35,10 @@ body {
   // text-align: center;
 }
 
+.logo {
+  width: 80px;
+}
+
 .navbar-inner {
   width: 100%;
   margin: 0 auto;
@@ -41,12 +46,9 @@ body {
 
 .navbar-col {
   position: relative;
-  padding: 24px 15px;
-}
-
-.header-wrapper {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  padding: 15px 0px;
+  flex-wrap: wrap;
 }
 
 .clearfix:before, .clearfix:after {
@@ -55,13 +57,11 @@ body {
 }
 
 .disease-center {
-  display: inline-block;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-right: 0px;
   margin-bottom: 0px;
   vertical-align: middle;
   color: #000;
-  float: right;
 }
 
 .disease-center span {
@@ -79,7 +79,7 @@ body {
     color: $font-color;
     font-weight: bold;
     font-size: 1.3em;
-    float: left;
+    margin-bottom: 10px;
 }
 
 .rif-katunda:hover {
@@ -89,7 +89,6 @@ body {
 
 /* Contents */
 .toc-container {
-    // background: #f9f9f9 none repeat scroll 0 0;
     border: 1px solid #e6e6e6;
     display: table;
     margin-bottom: 1em;
@@ -99,11 +98,6 @@ body {
     overflow: hidden;
     position: sticky;
     top: 115px;
-}
-
-.toc-title {
-    // font-weight: 700;
-    // text-align: center;
 }
 
 .toc-list {
@@ -139,8 +133,8 @@ body {
   border-style: solid;
   border-width: 1px 0 1px;
   overflow: hidden;
-  padding-top: 5px;
-  border-color: #e6e6e6;
+  padding-top: 30px;
+  border-color: #e6e6e6;  
 }
 
 .disease ul {
@@ -152,8 +146,16 @@ body {
   line-height: 2;
 }
 
+.carousel {
+  display: none;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
+    .disease .anchor {
+      top: -250px;
+    }
+
     .navbar, .page-body {
         padding: $padding-sm;
     }
@@ -162,7 +164,7 @@ body {
     }
 
     .toc-container {
-      margin-top: 50px;
+      margin-top: 255px;
     }
 }
 
@@ -171,23 +173,16 @@ body {
     .navbar, .page-body {
         padding: $padding-sm;
     }
-
-    .disease-center {
-      margin-left: 10px;
-    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
   .disease .anchor {
-    top: -115px;
-  }
-  .navbar-col {
-    padding: 30px 15px;
+    top: -215px;
   }
 
-  .figure {
-    margin-top: $top-page-margin;
+  .toc-container {
+    margin-top: 220px;
   }
 
   .page-body {
@@ -198,18 +193,50 @@ body {
   .header-inner {
     max-width: 720px;
   }
-  .index-right {
-    padding-left: 30px;
-    padding-right: 80px;
-  }
 
   .header-bar {
     box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4)
   }
 }
 
+.partners {
+  height: 100px;
+  width: 100px;
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .navbar-col {
+      padding: 20px 0px;
+    }
+
+    .title {
+      margin-left: 30px;
+    }
+
+    .disease-center {
+      margin-top: 0px;
+    }
+
+    .carousel {
+      display: block;
+      margin-top: 120px;
+    }
+
+    .toc-container {
+      top: 125px;
+      margin-top: 0px;
+    }
+
+    .disease .anchor, {
+      top: -125px;
+    }
+
+    .index-right {
+      padding-left: 30px;
+      padding-right: 80px;
+    }
+
     .page-body {
         padding: $padding-lg;
     }

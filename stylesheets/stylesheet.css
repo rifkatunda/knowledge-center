@@ -14,7 +14,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #000;
+  background-color: #27b954;
 }
 
 .header-inner {
@@ -25,6 +25,10 @@ body {
   margin-left: auto;
 }
 
+.logo {
+  width: 80px;
+}
+
 .navbar-inner {
   width: 100%;
   margin: 0 auto;
@@ -32,12 +36,9 @@ body {
 
 .navbar-col {
   position: relative;
-  padding: 24px 15px;
-}
-
-.header-wrapper {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  padding: 15px 0px;
+  flex-wrap: wrap;
 }
 
 .clearfix:before, .clearfix:after {
@@ -46,13 +47,11 @@ body {
 }
 
 .disease-center {
-  display: inline-block;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-right: 0px;
   margin-bottom: 0px;
   vertical-align: middle;
   color: #000;
-  float: right;
 }
 
 .disease-center span {
@@ -70,7 +69,7 @@ body {
   color: #fff;
   font-weight: bold;
   font-size: 1.3em;
-  float: left;
+  margin-bottom: 10px;
 }
 
 .rif-katunda:hover {
@@ -123,7 +122,7 @@ body {
   border-style: solid;
   border-width: 1px 0 1px;
   overflow: hidden;
-  padding-top: 5px;
+  padding-top: 30px;
   border-color: #e6e6e6;
 }
 
@@ -136,8 +135,16 @@ body {
   line-height: 2;
 }
 
+.carousel {
+  display: none;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
+  .disease .anchor {
+    top: -250px;
+  }
+
   .navbar, .page-body {
     padding: 4px;
   }
@@ -147,7 +154,7 @@ body {
   }
 
   .toc-container {
-    margin-top: 50px;
+    margin-top: 255px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -155,23 +162,15 @@ body {
   .navbar, .page-body {
     padding: 4px;
   }
-
-  .disease-center {
-    margin-left: 10px;
-  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
   .disease .anchor {
-    top: -115px;
+    top: -215px;
   }
 
-  .navbar-col {
-    padding: 30px 15px;
-  }
-
-  .figure {
-    margin-top: 99px;
+  .toc-container {
+    margin-top: 220px;
   }
 
   .page-body {
@@ -183,17 +182,48 @@ body {
     max-width: 720px;
   }
 
+  .header-bar {
+    box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4);
+  }
+}
+.partners {
+  height: 100px;
+  width: 100px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-col {
+    padding: 20px 0px;
+  }
+
+  .title {
+    margin-left: 30px;
+  }
+
+  .disease-center {
+    margin-top: 0px;
+  }
+
+  .carousel {
+    display: block;
+    margin-top: 120px;
+  }
+
+  .toc-container {
+    top: 125px;
+    margin-top: 0px;
+  }
+
+  .disease .anchor {
+    top: -125px;
+  }
+
   .index-right {
     padding-left: 30px;
     padding-right: 80px;
   }
 
-  .header-bar {
-    box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.4);
-  }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
   .page-body {
     padding: 13px;
   }
